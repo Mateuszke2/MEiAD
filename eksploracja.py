@@ -172,6 +172,7 @@ def Top10Genre():
     plt.show()
 
 def HistSumaWysw():
+    print('a')
     return 0
 
 Top10Genre()
