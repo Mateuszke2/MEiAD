@@ -84,7 +84,7 @@ def get_with_retry(url, max_retries, timeout, params = None):
     return response
 
 def get_music_genre(artist):
-    api_key = 'a35185554dcf6d7b7a76c514ba345975'  # Zarejestruj się na stronie Last.fm, aby uzyskać klucz API
+    api_key = 'a35185554dcf6d7b7a76c514ba345975' 
     base_url = 'http://ws.audioscrobbler.com/2.0/'
     params = {
         'method': 'artist.getinfo',
@@ -144,21 +144,16 @@ def get_music_genres_for_artists_LFM(artist_names):
 
 import pickle
 
-# Dodanie nowej kolumny z gatunkiem do DataFrame
+
 unique = df['Artist'].unique()
-print(unique)
+
 unique = pd.DataFrame({"Artist":unique})
-print(unique)
-# gatunek = 
+
 unique["Genre"]= None
 unique["Genre"] = unique["Artist"].apply(get_music_genre)
-# unique.loc[0, "Genre"] = get_music_genre(unique["Artist"][0])
-# unique.loc[1, "Genre"] = get_music_genre(unique["Artist"][1])
+
 with open("art_gat.pkl",'wb') as plik:
     pickle.dump(unique,plik)
-
-print(unique)
-
 
 df = df.merge(unique, on='Artist', how='left')
 
