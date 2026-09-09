@@ -1,0 +1,153 @@
+\documentclass[polish,polish,a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{inputenc}
+\usepackage{babel}
+\usepackage{pslatex}
+\usepackage{graphicx}
+\usepackage{tikz}
+%\usepackage{pgfplots}
+\usepackage{anysize}
+\usepackage{pgfgantt}
+\usepackage{latexsym,amsmath}
+\marginsize{2.5cm}{2.5cm}{1.8cm}{1.8cm}
+\usepackage{subfigure}
+\usepackage{psfrag}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{algorithm2e}
+\usepackage{animate}
+\usepackage{listings}
+\usepackage{musixtex}
+\usepackage{musicography}
+
+\makeatletter
+\usepackage[backref]{hyperref}
+\hypersetup{colorlinks = true,
+			linktoc = all,
+			linkcolor = black}
+\newcommand{\linia}{\rule{\linewidth}{0.4mm}}
+
+%pakiety do grafiki i wyświetlania 
+\usepackage{graphicx,subfigure}
+\usepackage{subcaption}
+\usepackage{psfrag}
+\usepackage{wrapfig}
+%\usepackage{geometry}
+
+%pakiety dodające dużo dodatkowych poleceń matematycznych
+\usepackage{amsmath} %polecenia
+\usepackage{amsfonts} %wektorowe skalowanie czcionki matematycznej
+
+%pakiety wspomagające i poprawiające składanie tabel
+\usepackage{supertabular}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{hhline}
+
+%do tytułu pod figurą 
+\usepackage[font=]{caption}
+%pakiet wypisujący na marginesie etykiety równań i rysunków zdefiniowanych przez \lab el{}, chcąc wygenerować finalną wersję dokumentu wystarczy usunąć poniższą linię
+% \usepackage{showlabels}
+
+\usepackage{listings}% do listingu fragmentów kodu
+\usepackage{xcolor}% do definiowania swoich własnych kolorów
+\usepackage{etoolbox}
+
+%do tworzenia interaktywnych PDF-ów z odsyłaczami w tekście i ze spisu treści
+\usepackage[backref]{hyperref}
+\hypersetup{colorlinks = true, %czy mają być kolory
+			linktoc = all, %czy wszystkie linki i podlinki
+			linkcolor = black} %określenie koloru linku
+
+%definicje własnych poleceń
+\newcommand{\R}{I\!\!R} %symbol liczb rzeczywistych, działa tylko w trybie matematycznym
+\newtheorem{theorem}{Twierdzenie}[section] %nowe otoczenie do składania twierdzeń
+
+%redefinicja starych poleceń
+\renewcommand{\figurename}{Rys.} %Rys. zamiast Rysunek przy automatycznym numerowaniu rysunków
+
+%rozłożenie tekstu
+\linespread{1} %interlinia
+%\newgeometry{tmargin=1.8cm, bmargin=1.8cm, lmargin=2.5cm,rmargin=2.5cm} %marginesy wpisywane ręcznie samemu
+%tutaj inny sposób na marginesy automatem pod A4 itp.
+
+
+
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+%"mystyle" code listing set
+\lstset{style=mystyle}
+
+
+\newcommand\SLASH{\char`\\}
+\newcommand\TI{\char`\~}
+
+
+\renewcommand{\maketitle}{\begin{titlepage}
+    \vspace*{1cm}
+    \begin{center}\LARGE
+    
+    
+    \end{center}
+    \vspace{3cm}
+    \noindent\linia
+    \begin{center}
+      \LARGE \textsc{\@title}
+         \end{center}
+     \linia
+    \vspace{0.5cm}
+    \begin{flushright}
+    \begin{minipage}{6.5cm}
+    \textit{\small Autorzy}\\
+    \normalsize \textsc{\@author} \par
+    \end{minipage}
+    \vspace{3cm}
+     \vspace{3cm}\\
+         Prowadzący \\  
+         \vspace{0.2cm}\textit{dr inż. Agata Migalska} \\~\\
+         Kurs \\
+         \vspace{0.2cm}\textit{Metody Analizy i Eksploracji Danych}
+     \end{flushright}
+  \end{titlepage}%
+}
+\makeatother
+\author{Mateusz Gwizdak 252945\\ 
+Filip Hellwig 252904\\
+Patryk Gajda 252915}
+\title{Analiza i eksploracja danych o artystach z platformy Spotify i Youtube}
+\begin{document}
+\maketitle
+\large 
+\tableofcontents
+\newpage
+% \renewcommand\labelitemi{--}
+\include{propozycja_projektu}
+
+
+\end{document}
